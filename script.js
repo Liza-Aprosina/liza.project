@@ -1,78 +1,78 @@
-let start=0;
-let end=0;
-let condition=true;
-function forward() {
-    anime({
-        targets: '.menu-small',
-        translateX: ['-100%', '0'],
-        easing: 'easeInOutQuad',
-        direction: 'alternate',
-        duration: 1000,
-        loop: false
-    });
-    condition=false; 
-    anime({
-        targets: '.stick',
-        rotate: 180,
-        easing: 'easeInOutQuad',
-        direction: 'alternate',
-        duration: 1000,
-        loop: false
-    });
-    anime({
-        targets: '.menu_small_icon',
-        rotate: 90,
-        easing: 'easeInOutQuad',
-        direction: 'alternate',
-        duration: 1000,
-        loop: false
-    });
-};
+// let start=0;
+// let end=0;
+// let condition=true;
+// function forward() {
+//     anime({
+//         targets: '.menu-small',
+//         translateX: ['-100%', '0'],
+//         easing: 'easeInOutQuad',
+//         direction: 'alternate',
+//         duration: 1000,
+//         loop: false
+//     });
+//     condition=false; 
+//     anime({
+//         targets: '.stick',
+//         rotate: 180,
+//         easing: 'easeInOutQuad',
+//         direction: 'alternate',
+//         duration: 1000,
+//         loop: false
+//     });
+//     anime({
+//         targets: '.menu_small_icon',
+//         rotate: 90,
+//         easing: 'easeInOutQuad',
+//         direction: 'alternate',
+//         duration: 1000,
+//         loop: false
+//     });
+// };
 
-let links=document.querySelectorAll('.scroll');
-let targeID;
-links.forEach(function (element){
-    element.addEventListener('click', function (event) {
-        event.preventDefault();
-        targetID=element.getAttribute('href');
-        document.querySelector(targetID).scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        })
-    })
-});
+// let links=document.querySelectorAll('.scroll');
+// let targetID;
+// links.forEach(function (element){
+//     element.addEventListener('click', function (event) {
+//         event.preventDefault();
+//         targetID=element.getAttribute('href');
+//         document.querySelector(targetID).scrollIntoView({
+//             behavior: 'smooth',
+//             block: 'start'
+//         })
+//     })
+// });
 
-$(document).ready(function () {
-  $('.info_punkts').bxSlider();
-});
+// $(document).ready(function () {
+//   $('.info_punkts').bxSlider();
+// });
 
-function backward() {
-    anime({
-        targets: '.menu-small',
-        translateX: ['0', '-100%'],
-        easing: 'easeInOutQuad',
-        direction: 'alternate',
-        duration: 1000,
-        loop: false
-    });
-    anime({
-        targets: '.stick',
-        rotate: 0,
-        easing: 'easeInOutQuad',
-        direction: 'alternate',
-        duration: 1000,
-        loop: false
-    });
-    anime({
-        targets: '.menu_small_icon',
-        rotate: -180,
-        easing: 'easeInOutQuad',
-        direction: 'alternate',
-        duration: 1000,
-        loop: false
-    });
-    condition=true;
-};
+// function backward() {
+//     anime({
+//         targets: '.menu-small',
+//         translateX: ['0', '-100%'],
+//         easing: 'easeInOutQuad',
+//         direction: 'alternate',
+//         duration: 1000,
+//         loop: false
+//     });
+//     anime({
+//         targets: '.stick',
+//         rotate: 0,
+//         easing: 'easeInOutQuad',
+//         direction: 'alternate',
+//         duration: 1000,
+//         loop: false
+//     });
+//     anime({
+//         targets: '.menu_small_icon',
+//         rotate: -180,
+//         easing: 'easeInOutQuad',
+//         direction: 'alternate',
+//         duration: 1000,
+//         loop: false
+//     });
+//     condition=true;
+// };
 // $('.menu_small_icon').click(function(){
 //     if (condition==true) {
 //         forward();
